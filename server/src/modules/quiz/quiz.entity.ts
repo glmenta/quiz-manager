@@ -1,9 +1,9 @@
-import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity('quizes')
 export class Quiz extends BaseEntity {
     @PrimaryGeneratedColumn({
-        comment: 'The quiz id'
+        comment: 'The quiz id',
     })
     id: number;
 
@@ -19,7 +19,7 @@ export class Quiz extends BaseEntity {
 
     @Column({
         type: 'boolean',
-        default: 1,
+        default: true,
     })
     isActive: boolean;
 }
